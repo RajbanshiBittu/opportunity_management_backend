@@ -9,4 +9,11 @@ router.post('/login', login);
 router.get('/me', protect, getMe);
 router.post('/logout', logout)
 
+router.get('/', (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: 'CEOFactory Backend API is running'
+  });
+});
+
 export default router;
