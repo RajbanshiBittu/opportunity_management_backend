@@ -14,8 +14,15 @@ connectDB();
 
 const PORT = process.env.PORT;
 
-application.use(cors());
 application.use(express.json());
+
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'https://your-frontend.vercel.app'
+  ],
+  credentials: true
+}));
 
 // Mount routes
 application.use('/api/auth', authRoutes);
