@@ -12,17 +12,15 @@ const application = express();
 
 connectDB();
 
-const PORT = process.env.PORT;
-
-application.use(express.json());
-
-app.use(cors({
+application.use(cors({
   origin: [
     'http://localhost:5173',
     'https://your-frontend.vercel.app'
   ],
   credentials: true
 }));
+
+application.use(express.json());
 
 // Mount routes
 application.use('/api/auth', authRoutes);
@@ -37,6 +35,7 @@ application.get('/', (req, res) => {
 
 application.use(errorHandler);
 
+const PORT = process.env.PORT;
 
 application.listen(PORT, () => {
     console.log(`Server is running on port:${PORT}`);
