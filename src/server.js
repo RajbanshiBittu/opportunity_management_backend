@@ -21,10 +21,12 @@ application.use(express.json());
 application.use('/api/auth', authRoutes);
 application.use('/api', opportunityRoutes);
 
-// Fallback Route for Undefined API endpoints
-// application.use('*', (req, res) => {
-//   return res.status(404).json({ error: 'API endpoint not found', message: error.message});
-// });
+application.get('/', (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: 'CEOFactory Backend API is running'
+  });
+});
 
 application.use(errorHandler);
 
