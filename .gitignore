@@ -1,0 +1,82 @@
+# Dependencies
+node_modules/
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Runtime Data
+pids/
+*.pid
+*.pid.lock
+
+# Coverage Reports
+coverage/
+
+# Build Output
+dist/
+build/
+out/
+
+# Temporary Files
+tmp/
+temp/
+*.tmp
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# TypeScript
+*.tsbuildinfo
+
+# Database Files
+*.sqlite
+*.sqlite3
+
+# Uploads (if generated at runtime)
+uploads/
+public/uploads/
+
+# Cache
+.cache/
+.parcel-cache/
+
+# Testing
+.nyc_output/
+
+# Package Managers
+.pnp
+.pnp.js
+
+# Misc
+*.tgz
+*.bak
+
+# Docker
+.dockerignore
+
+# Render
+.render/
+
+# PM2
+.pm2/
+
+# Secrets
+secrets/
+config/secrets.json
